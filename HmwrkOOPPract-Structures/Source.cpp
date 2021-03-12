@@ -81,8 +81,10 @@ public:
 			delete[] republic;
 			name = new char[strlen(other.name) + 1];
 			strcpy_s(name, strlen(other.name) + 1, other.name);
+
 			planetSystem = new char[strlen(other.planetSystem) + 1];
 			strcpy_s(planetSystem, strlen(other.planetSystem) + 1, other.planetSystem);
+
 			republic = new char[strlen(other.republic) + 1];
 			strcpy_s(republic, strlen(other.republic) + 1, other.republic);
 		}
@@ -121,6 +123,8 @@ public:
 
 				this->name = new char[strlen(other.name) + 1];
 				strcpy_s(this->name, strlen(other.name) + 1, other.name);
+
+				this->rank = other.rank;
 
 				this->planet = other.planet;
 
@@ -252,8 +256,8 @@ public:
 			delete[] type;
 			planet = NULL;
 				id = new char[strlen(other.id) + 1];
-
 				strcpy_s(id, strlen(other.id) + 1, other.id);
+				
 				this->rank = other.rank;
 
 				type = new char[strlen(other.type) + 1];
@@ -309,7 +313,7 @@ int main() {
 	Payner.print();
 	Jedi guy("Obiwan", 6.50 , &Payner, Youngling, "Human", "Jesus");
 	guy.print();
-	Jedi someone("Tisho", 1.80 , &Payner ,Padawan, "4ovek", "GospoT");
+	Jedi someone("Tisho", 1.90 , &Payner ,Padawan, "4ovek", "GospoT");
 	guy = someone;
 	Stormtrooper Ogi("Azazel", Cadet, "tip nqkuv", &Payner);
 	Ogi.print();
